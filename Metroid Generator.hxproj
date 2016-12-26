@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+  <!-- Output SWF options -->
+  <output>
+    <movie outputType="CustomBuild" />
+    <movie input="" />
+    <movie path="project.xml" />
+    <movie fps="65" />
+    <movie width="640" />
+    <movie height="480" />
+    <movie version="1" />
+    <movie minorVersion="0" />
+    <movie platform="Lime" />
+    <movie background="000000" />
+    <movie preferredSDK="C:\Program Files (x86)\Stencyl\plaf\haxe" />
+  </output>
+  <!-- Other classes to be compiled into your SWF -->
+  <classpaths>
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\openfl\openfl" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\lime\lime" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\actuate\1,8,6" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\console\1,00" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\polygonal-ds\1,4,1" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\polygonal-printf\1,0,0-beta" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\box2d\1,11" />
+    <class path="C:\Users\shmitchn\Documents\GitHub\stencyl-engine" />
+    <class path="Source" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\lib\openfl\openfl\extern" />
+    <class path="C:\Program Files (x86)\Stencyl\plaf\haxe\extensions\gestures" />
+    <class path="C:\Users\shmitchn\AppData\Roaming\Stencyl\stencylworks\engine-extensions\tileapi" />
+    <class path="Export\flash\haxe" />
+  </classpaths>
+  <!-- Build options -->
+  <build>
+    <option directives="openfl=3.6.1&#xA;lime=2.9.1&#xA;actuate=1.8.6&#xA;console=0.0.0&#xA;polygonal-ds=1.4.1&#xA;polygonal-printf=1.0.0-beta&#xA;box2d=0.0.0&#xA;stencyl=0.0.0&#xA;openfl-next&#xA;tools=2.9.1&#xA;no-compilation&#xA;openfl-flash&#xA;web&#xA;network-sandbox&#xA;as3_native&#xA;swf-directblit&#xA;display" />
+    <option flashStrict="False" />
+    <option noInlineOnDebug="False" />
+    <option mainClass="ApplicationMain" />
+    <option enabledebug="True" />
+    <option additional="--remap nme:openfl&#xA;--no-traces &#xA;-swf-lib mochi.swf&#xA;-swf-lib newgrounds.swf&#xA;-swf-lib cpmstar.swf&#xA;-resource Assets/graphics/preloader-bg.png@preloader-bg &#xA;-swf-version 11&#xA;-debug " />
+  </build>
+  <!-- haxelib libraries -->
+  <haxelib>
+    <!-- example: <library name="..." /> -->
+  </haxelib>
+  <!-- Class files to compile (other referenced classes will automatically be included) -->
+  <compileTargets>
+    <!-- example: <compile path="..." /> -->
+  </compileTargets>
+  <!-- Paths to exclude from the Project Explorer tree -->
+  <hiddenPaths>
+    <hidden path="obj" />
+  </hiddenPaths>
+  <!-- Executed before build -->
+  <preBuildCommand>"$(CompilerPath)/haxelib" run lime build "$(OutputFile)" $(TargetBuild) -$(BuildConfig) -Dfdb</preBuildCommand>
+  <!-- Executed after build -->
+  <postBuildCommand alwaysRun="False">c:\windows\system32\cmd.exe /C copy "$(ProjectDir)\Source\scripts\Design*.hx" "$(ProjectDir)\..\..\games\$(ProjectName)\snippets\"
+c:\windows\system32\cmd.exe /C xcopy "$(ProjectDir)\Source\scripts\*.hx" "$(ProjectDir)\..\..\games\$(ProjectName)\code\" /Y /exclude:c:\exclude.txt</postBuildCommand>
+  <!-- Other project options -->
+  <options>
+    <option showHiddenPaths="False" />
+    <option testMovie="Custom" />
+    <option testMovieCommand="" />
+  </options>
+  <!-- Plugin storage -->
+  <storage />
+</project>

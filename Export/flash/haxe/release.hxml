@@ -1,0 +1,42 @@
+-main ApplicationMain 
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/openfl/openfl
+-D openfl=2.2.4
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/lime/lime
+-D lime=2.0.6
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/actuate/1,6,5
+-D actuate=1.6.5
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/console/1,00
+-D console
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/polygonal-ds/1,4,1
+-D polygonal-ds=1.4.1
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/polygonal-printf/1,0,0-beta
+-D polygonal-printf=1.0.0-beta
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/box2d/1,11
+-D box2d
+-cp C:/Program Files (x86)/Stencyl/plaf/haxe/lib/stencyl/1,00
+-D stencyl
+-cp Source
+-cp C:\Program Files (x86)\Stencyl\plaf\haxe\extensions/gestures
+-cp C:\Users\shmitchn\AppData\Roaming\Stencyl\stencylworks\engine-extensions/tileapi
+-D lime-openal
+-D tools=2.0.6
+-D flash-use-stage
+-D no-compilation
+-D lime-opengl
+-D openfl-flash
+-D lime-curl
+-D web
+--remap nme:openfl
+--no-traces
+-D network-sandbox
+-D as3_native
+-D swf-directblit
+-swf-lib mochi.swf
+-swf-lib newgrounds.swf
+-swf-lib cpmstar.swf
+-resource Assets/graphics/preloader-bg.png@preloader-bg
+-swf-lib Export/flash/obj/assets.swf
+-swf-version 11
+-swf Export/flash/bin/Metroid Generator.swf
+-swf-header 640:480:65:000000
+-cp Export/flash/haxe
